@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_in_email_action">
+    <sysevent_in_email_action action="DELETE">
+        <action>record_action</action>
+        <active>true</active>
+        <assignment_operator/>
+        <condition_script>email.subject.toLowerCase().indexOf('overdue needit task')&gt;=0</condition_script>
+        <description/>
+        <event_name>email.read</event_name>
+        <filter_condition/>
+        <from/>
+        <name>Update NeedIt Task on Reply</name>
+        <order>100</order>
+        <reply_email/>
+        <required_roles/>
+        <script><![CDATA[(function runAction(/*GlideRecord*/ current, /*GlideRecord*/ event, /*EmailWrapper*/ email, /*ScopedEmailLogger*/ logger, /*EmailClassifier*/ classifier) {
+
+	// Implement email action here
+	current.work_notes = email.body_text;
+	current.update();
+
+})(current, event, email, logger, classifier);]]></script>
+        <stop_processing>true</stop_processing>
+        <sys_class_name>sysevent_in_email_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-24 01:29:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8fe0220e47602110a4ed0af3836d4320</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update NeedIt Task on Reply</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sysevent_in_email_action_8fe0220e47602110a4ed0af3836d4320</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-24 01:29:37</sys_updated_on>
+        <table>x_58872_needit_needit_task</table>
+        <template/>
+        <type>reply</type>
+    </sysevent_in_email_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>e9d8c838db1d59d442b321c405961954</instance_id>
+        <instance_name>dev131392</instance_name>
+        <name>sysevent_in_email_action_8fe0220e47602110a4ed0af3836d4320</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysevent_in_email_action"&gt;&lt;sysevent_in_email_action action="INSERT_OR_UPDATE"&gt;&lt;action&gt;record_action&lt;/action&gt;&lt;active&gt;true&lt;/active&gt;&lt;assignment_operator/&gt;&lt;condition_script&gt;email.subject.toLowerCase().indexOf('overdue needit task')&amp;gt;=0&lt;/condition_script&gt;&lt;description/&gt;&lt;event_name&gt;email.read&lt;/event_name&gt;&lt;filter_condition/&gt;&lt;from/&gt;&lt;name&gt;Update NeedIt Task on Reply&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;reply_email/&gt;&lt;required_roles/&gt;&lt;script&gt;&lt;![CDATA[(function runAction(/*GlideRecord*/ current, /*GlideRecord*/ event, /*EmailWrapper*/ email, /*ScopedEmailLogger*/ logger, /*EmailClassifier*/ classifier) {
+
+	// Implement email action here
+	current.work_notes = email.body_text;
+	current.update();
+
+})(current, event, email, logger, classifier);]]&gt;&lt;/script&gt;&lt;stop_processing&gt;true&lt;/stop_processing&gt;&lt;sys_class_name&gt;sysevent_in_email_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-01-24 01:29:37&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;8fe0220e47602110a4ed0af3836d4320&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Update NeedIt Task on Reply&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_in_email_action_8fe0220e47602110a4ed0af3836d4320&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-01-24 01:29:37&lt;/sys_updated_on&gt;&lt;table&gt;x_58872_needit_needit_task&lt;/table&gt;&lt;template/&gt;&lt;type&gt;reply&lt;/type&gt;&lt;/sysevent_in_email_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-697404497</payload_hash>
+        <record_name>Update NeedIt Task on Reply</record_name>
+        <reverted_from/>
+        <source>75aea30e97b351108bce72121153af3e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-24 01:29:37</sys_created_on>
+        <sys_id>0751a2ca47602110a4ed0af3836d437b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>185e16519160000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-24 01:29:37</sys_updated_on>
+        <type>Inbound Email Actions</type>
+        <update_guid>4f51a2ca61602110dbe25b97d1d1967a</update_guid>
+        <update_guid_history>4f51a2ca61602110dbe25b97d1d1967a:-697404497</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-29 00:04:08</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_in_email_action">sysevent_in_email_action</sys_db_object>
+        <sys_id>25d44e3eb9e240a080b3294a4a89a904</sys_id>
+        <sys_metadata>8fe0220e47602110a4ed0af3836d4320</sys_metadata>
+        <sys_name>Update NeedIt Task on Reply</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent display_value="NeedIt Task">1ee9b38f47102110a4ed0af3836d43e9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sysevent_in_email_action_8fe0220e47602110a4ed0af3836d4320</sys_update_name>
+        <sys_update_version display_value="sysevent_in_email_action_8fe0220e47602110a4ed0af3836d4320">0751a2ca47602110a4ed0af3836d437b</sys_update_version>
+    </sys_metadata_delete>
+</record_update>
